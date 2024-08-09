@@ -1,0 +1,31 @@
+{
+    "manifest_version": 3,
+    "name": "Laughing poker online",
+    "description": "Extra functionality for planningpokeronline.com",
+    "version": "1.0",
+    "permissions": [
+        "declarativeNetRequest"
+    ],
+    "host_permissions": [
+        "https://planningpokeronline.com/*"
+    ],
+    "declarative_net_request": {
+        "rule_resources": [
+            {
+                "id": "app-injection-ruleset",
+                "enabled": true,
+                "path": "app-injection-ruleset.json"
+            }
+        ]
+    },
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "app-injector.js"
+            ],
+            "matches": [
+                "*://planningpokeronline.com/*"
+            ]
+        }
+    ]
+}
